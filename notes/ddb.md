@@ -230,3 +230,55 @@ Global Secondary Index
   - Synchronous
   - Groups ≤25 action requests
 
+### DynamoDB follow-along
+
+Video 1 6.05.45
+
+- Andrew uses the same Cloud9 environment from the [[AWS Developer Associate: Elastic Beanstalk]] follow-along.
+- Files: [GitHub - ExamProCo/TheFreeAWSDeveloperAssociate](https://github.com/examproco/thefreeawsdeveloperassociate)
+- Data: _starfleet.csv_ (Star Trek)
+
+#### Create table
+
+Video 1 6.10.30
+
+Andrew walks through table creation in the UI and CLI (`aws dynamodb create-table`). Andrew specifies all the arguments in a text file and pastes them onto the command line with Cloud9:
+
+```
+~
+❯ aws dynamodb create-table \
+--table-name Starships \
+--attribute-definitions \
+AttributeName=ShipClass,AttributeType=S \
+AttributeName=Registry,AttributeType=S \
+--key-schema \
+AttributeName=ShipClass,KeyType=HASH \
+AttributeName=Registry,KeyType=RANGE \
+--provisioned-throughput \
+ReadCapacityUnits=5,WriteCapacityUnits=5 \
+--region us-east-2
+```
+
+A better way is to generate a skeleton file in YAML, populate the fields there, read the file when creating the table.
+
+[Generating AWS CLI skeleton and input parameters from a JSON or YAML input file - AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-skeleton.html):
+
+> **You can create and consume YAML input skeleton templates only with version 2 of the AWS CLI.** If you use AWS CLI version 1, you can create and consume only JSON input skeleton templates.
+
+```sh
+# Generate a skeleton
+~
+❯ aws dynamodb create-table --generate-cli-skeleton yaml-input > \
+~/dev/aws/TheFreeAWSDeveloperAssociate/DynamoDB/dynamodb-starships.yaml
+
+# Edit the skeleton in your text editor
+~
+❯ code ~/dev/aws/TheFreeAWSDeveloperAssociate/DynamoDB/dynamodb-starships.yaml
+
+# Create the table with the skeleton
+~
+❯ aws dynamodb create-table --region us-east-2 --cli-input-yaml \
+~/dev/aws/TheFreeAWSDeveloperAssociate/DynamoDB/dynamodb-starships.yaml
+```
+
+#### Convert CSV to JSON
