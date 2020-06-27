@@ -259,7 +259,7 @@ ReadCapacityUnits=5,WriteCapacityUnits=5 \
 --region us-east-2
 ```
 
-A better way is to generate a skeleton file in YAML, populate the fields there, read the file when creating the table.
+A better way is to generate a skeleton file in YAML, populate the fields there, and then read the file when creating the table.
 
 [Generating AWS CLI skeleton and input parameters from a JSON or YAML input file - AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-skeleton.html):
 
@@ -281,4 +281,16 @@ A better way is to generate a skeleton file in YAML, populate the fields there, 
 ~/dev/aws/TheFreeAWSDeveloperAssociate/DynamoDB/dynamodb-starships.yaml
 ```
 
-#### Convert CSV to JSON
+#### Convert CSV to JSON and `batch-write-item`
+
+Video 1 6.18.00
+
+The Ruby script _[csv-to-json.rb](https://github.com/ExamProCo/TheFreeAWSDeveloperAssociate/blob/master/DynamoDB/csv-to-json.rb)_ generates batches of 25 items, because the [`batch-write-item` operation](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/batch-write-item.html?highlight=dynamodb) only allows writing 25 records at a time.
+
+I wrote a CSV to JSON script in Python. There's a general version currently in [br3ndonland/algorithms](https://github.com/br3ndonland/algorithms), and I may add an enhanced version here with some AWS-specific features, or maybe using Pandas instead of the standard library. Using [Boto3 batch writing](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html#batch-writing) in Python may allow batch uploads without having to split everything into chunks manually. Also see the [Boto3 docs on DynamoDB](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html).
+
+Another option is to use AWS Data Pipeline. See [AWS Data Pipeline docs: Import Data into DynamoDB - ](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-importexport-ddb-part1.html).
+
+#### `get-item`
+
+Video 1 6.24.50
