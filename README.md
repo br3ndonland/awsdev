@@ -2,11 +2,23 @@
 
 <img src="./notes/img/aws-certifications.png" alt="AWS certifications" width="600px">
 
-## Resources
+## Description
 
-### AWS
+This repository contains resources from my work on the [AWS Developer Associate certification](https://aws.amazon.com/certification/certified-developer-associate/).
 
-- [AWS certifications](https://aws.amazon.com/certification/)
+I created the repository with the [GitHub CLI](https://cli.github.com/):
+
+```sh
+~/dev/aws
+❯ gh repo create awsdev -d "AWS Developer Associate Certification" \
+  --enable-issues=false --enable-wiki=false --public
+```
+
+```
+✓ Created repository br3ndonland/awsdev on GitHub
+? Create a local project directory for br3ndonland/awsdev? Yes
+✓ Initialized repository in './awsdev/'
+```
 
 ### freeCodeCamp ExamPro materials
 
