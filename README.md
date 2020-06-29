@@ -4,7 +4,7 @@
 
 ## Description
 
-This repository contains resources from my work on the [AWS Developer Associate certification](https://aws.amazon.com/certification/certified-developer-associate/).
+**This repository contains resources from my work on the [AWS Developer Associate certification](https://aws.amazon.com/certification/certified-developer-associate/). It's mostly notes right now, but after I pass the exam, I will add more code examples.**
 
 I created the repository with the [GitHub CLI](https://cli.github.com/):
 
