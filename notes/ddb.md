@@ -1,5 +1,27 @@
 # AWS Developer Associate: DynamoDB
 
+## Table of Contents <!-- omit in toc -->
+
+- [freeCodeCamp ExamPro walkthrough](#freecodecamp-exampro-walkthrough)
+  - [Intro](#intro)
+  - [Partitions](#partitions)
+  - [Primary keys](#primary-keys)
+  - [Query](#query)
+  - [Scan](#scan)
+  - [Capacity](#capacity)
+  - [Calculating RCU](#calculating-rcu)
+  - [Calculating WCU](#calculating-wcu)
+  - [Global tables](#global-tables)
+  - [Transactions](#transactions)
+  - [TTL](#ttl)
+  - [DynamoDB streams](#dynamodb-streams)
+  - [DynamoDB errors](#dynamodb-errors)
+  - [Secondary Indices](#secondary-indices)
+  - [DynamoDB Accelerator (DAX)](#dynamodb-accelerator-dax)
+  - [DynamoDB cheat sheet](#dynamodb-cheat-sheet)
+  - [DynamoDB CLI commands](#dynamodb-cli-commands)
+  - [DynamoDB follow-along](#dynamodb-follow-along)
+
 ## freeCodeCamp ExamPro walkthrough
 
 ### Intro
@@ -237,14 +259,15 @@ Video 1 6.05.45
 - Andrew uses the same Cloud9 environment from the [[AWS Developer Associate: Elastic Beanstalk]] follow-along.
 - Files: [GitHub - ExamProCo/TheFreeAWSDeveloperAssociate](https://github.com/examproco/thefreeawsdeveloperassociate)
 - Data: _starfleet.csv_ (Star Trek)
+- See the [AWS CLI DynamoDB reference](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/dynamodb/index.html#cli-aws-dynamodb)
 
-#### Create table
+#### `create-table`
 
 Video 1 6.10.30
 
 Andrew walks through table creation in the UI and CLI (`aws dynamodb create-table`). Andrew specifies all the arguments in a text file and pastes them onto the command line with Cloud9:
 
-```
+```sh
 ~
 ❯ aws dynamodb create-table \
 --table-name Starships \
@@ -287,10 +310,102 @@ Video 1 6.18.00
 
 The Ruby script _[csv-to-json.rb](https://github.com/ExamProCo/TheFreeAWSDeveloperAssociate/blob/master/DynamoDB/csv-to-json.rb)_ generates batches of 25 items, because the [`batch-write-item` operation](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/batch-write-item.html?highlight=dynamodb) only allows writing 25 records at a time.
 
-I wrote a CSV to JSON script in Python. There's a general version currently in [br3ndonland/algorithms](https://github.com/br3ndonland/algorithms), and I may add an enhanced version here with some AWS-specific features, or maybe using Pandas instead of the standard library. Using [Boto3 batch writing](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html#batch-writing) in Python may allow batch uploads without having to split everything into chunks manually. Also see the [Boto3 docs on DynamoDB](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html).
+I wrote a CSV to JSON script in Python. There's a general version currently in [br3ndonland/algorithms](https://github.com/br3ndonland/algorithms), and I may add an enhanced version here with some AWS-specific features, or maybe using Pandas instead of the standard library. Using [Boto3 batch writing](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html#batch-writing) in Python may allow batch uploads without having to split everything into chunks manually. Also see the [Boto3 docs on DynamoDB](https://boto3.amazonaws.com/v2/documentation/api/latest/guide/dynamodb.html).
 
-Another option is to use AWS Data Pipeline. See [AWS Data Pipeline docs: Import Data into DynamoDB - ](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-importexport-ddb-part1.html).
+Another option is to use AWS Data Pipeline. See [AWS Data Pipeline docs: Import Data into DynamoDB](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-importexport-ddb-part1.html).
 
 #### `get-item`
 
 Video 1 6.24.50
+
+We use a separate JSON file to specify the composite primary key (see [primary keys section](#primary-keys) above).
+
+_key.json_
+
+```json
+{
+  "Registry": { "S": "NCC-13958" },
+  "ShipClass": { "S": "Excelsior" }
+}
+```
+
+We then pass the file in with the query.
+
+```sh
+~
+❯ aws dynamodb get-item --table-name Starships --key file://key.json
+```
+
+#### `batch-get-item`
+
+Video 1 6.27.43
+
+We use a similar approach to `get-item`, passing in an external JSON file. Here, the table name is set in the external file, _request-items.json_.
+
+```json
+{
+  "Starships": {
+    "Keys": [
+      {
+        "Registry": { "S": "NCC-13958" },
+        "ShipClass": { "S": "Excelsior" }
+      },
+      {
+        "Registry": { "S": "NCC-1864" },
+        "ShipClass": { "S": "Miranda" }
+      }
+    ]
+  }
+}
+```
+
+```sh
+~
+❯ aws dynamodb batch-get-item --request-items file://request-items.json --output text
+```
+
+#### `delete-item` and `put-item`
+
+Video 1 6.30.55
+
+#### `update-item`
+
+Video 1 6.36.30
+
+#### `scan`
+
+Video 1 6.43.00
+
+#### `query`
+
+Video 1 6.48.00
+
+```sh
+~
+❯ aws dynamodb query --table-name Starships \
+  --projection-expression "Registry" \
+  --key-condition-expression "ShipClass = :C" \
+  --expression-attribute-values '{":C": {":S": "Galaxy"}}' \
+  --no-scan-index-forward --output text
+```
+
+#### `transact`
+
+Video 1 6.55.00
+
+We just reviewed `transact-get-items` and `transact-write-items`, but didn't run the commands because they're a bit more work to set up.
+
+#### `delete-table`
+
+Video 1 6.57.00
+
+```sh
+~
+❯ aws dynamodb delete-table --table-name Starships
+```
+
+#### DynamoDB streams
+
+Video 1 6.59.00
+
+Streams are out of the scope of the Developer Associate certification, but are a good stretch goal if you want to go further.
