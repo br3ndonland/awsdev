@@ -46,3 +46,9 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
 - Alex DeBrie
   - [Full Stack Radio podcast episode 2020 139](https://www.fullstackradio.com/episodes/139) 20200508
   - [DynamoDB Guide from Alex DeBrie](https://www.dynamodbguide.com)
+  - AWS reinvent 2019: [Data modeling with Amazon DynamoDB](https://youtu.be/DIQVJqiSUkE), Alex DeBrie
+
+### AWS in biotech
+
+- AWS reinvent 2019: [Creating life at scale with AWS](https://youtu.be/arDI64ja6KA), Dave Treff, Ginkgo Bioworks
+- AWS reinvent 2019: [High-throughput production of mRNA](https://youtu.be/cxu2cD5FBcg), Dave Johnson, Moderna Therapeutics
