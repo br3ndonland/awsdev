@@ -32,6 +32,7 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
 
 ### General
 
+- [AWS docs home](https://docs.aws.amazon.com/index.html)
 - AWS What the Cloud _(recommended in the freeCodeCamp article)_
   - [YouTube](https://www.youtube.com/whatthecloud)
 - Bart Castle _(recommended in the freeCodeCamp article)_
