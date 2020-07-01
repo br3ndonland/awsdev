@@ -14,6 +14,9 @@
   - [Bastion](#bastion)
   - [Autoscaling Group](#autoscaling-group)
   - [Direct Connect](#direct-connect)
+  - [Security Group](#security-group)
+  - [NACL](#nacl)
+  - [Follow-along](#follow-along)
 
 ## freeCodeCamp ExamPro walkthrough
 
@@ -24,6 +27,8 @@
 - **VPC = Virtual Private Cloud**
 - **VPC is important to know for all AWS certifications.**
 - A VPC is a logically isolated portion of the AWS cloud, which contains resources in a virtual network you define.
+
+<img src="./img/vpc-overview.png" alt="AWS VPC overview" width="600px">
 
 ### Core components
 
@@ -103,3 +108,28 @@
 
 - [Direct Connect](https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html) provides dedicated fiber connections to AWS, bypassing ISPs.
 - Very useful for enterprise
+
+### Security Group
+
+Video 1 7.48.15
+
+- Security groups are like virtual firewalls for EC2 instances, by applying sets of rules.
+- All traffic is blocked by default.
+- A single EC2 instance can belong to multiple security groups.
+- Stateful (incoming and outgoing traffic gets same rules)
+- Limits
+  - 10K security groups per region (default is 2500)
+  - 60 inbound and 60 outbound rules per security group
+  - 16 security groups per elastic network interface (ENI)
+
+### NACL
+
+Video 1 7.54.30
+
+- Optional virtual firewall at the subnet layer.
+- VPCs automatically get a default NACL
+- Stateless (incoming rules not automatically applied to outgoing traffic)
+
+### Follow-along
+
+7.58.30
