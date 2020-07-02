@@ -50,6 +50,17 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
   - [DynamoDB Guide from Alex DeBrie](https://www.dynamodbguide.com)
   - AWS reinvent 2019: [Data modeling with Amazon DynamoDB](https://youtu.be/DIQVJqiSUkE), Alex DeBrie
 
+### CloudFormation and infrastructure as code
+
+- [Wikipedia: Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)
+- [AWS CloudFormation docs](https://docs.aws.amazon.com/cloudformation/index.html)
+- [AWS CloudFormation docs: How does AWS CloudFormation work?](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-whatis-howdoesitwork.html)
+- [GitHub: awesome-cloudformation](https://github.com/aws-cloudformation/awesome-cloudformation)
+- [CloudFormation VSCode extension](https://github.com/aws-cloudformation/aws-cfn-lint-visual-studio-code)
+- [AWS Boto3 v1 docs: CloudFormation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudformation.html)
+- [Terraform docs: Terraform vs. CloudFormation](https://www.terraform.io/intro/vs/cloudformation.html)
+- [Ansible docs: AWS](https://docs.ansible.com/ansible/latest/scenario_guides/guide_aws.html)
+
 ### AWS in biotech
 
 - AWS reinvent 2019: [Creating life at scale with AWS](https://youtu.be/arDI64ja6KA), Dave Treff, Ginkgo Bioworks
