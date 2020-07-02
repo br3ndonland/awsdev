@@ -4,6 +4,9 @@
 
 - [freeCodeCamp ExamPro walkthrough](#freecodecamp-exampro-walkthrough)
   - [Intro](#intro)
+  - [Capacity units](#capacity-units)
+  - [Anatomy](#anatomy)
+  - [Read consistency](#read-consistency)
   - [Partitions](#partitions)
   - [Primary keys](#primary-keys)
   - [Query](#query)
@@ -15,7 +18,7 @@
   - [Transactions](#transactions)
   - [TTL](#ttl)
   - [DynamoDB streams](#dynamodb-streams)
-  - [DynamoDB errors](#dynamodb-errors)
+  - [DynamoDB exceptions](#dynamodb-exceptions)
   - [Secondary Indices](#secondary-indices)
   - [DynamoDB Accelerator (DAX)](#dynamodb-accelerator-dax)
   - [DynamoDB cheat sheet](#dynamodb-cheat-sheet)
@@ -26,20 +29,25 @@
 
 ### Intro
 
-[Video 1](https://youtu.be/RrKRN9zRBWs) 5.05.15. **This is the most important service to know for the exam.**
+[Video 1](https://youtu.be/RrKRN9zRBWs) 5.05.15. **DynamoDB is the most important service to know for the exam.**
 
-- Capacity
-  - **RCU**: Read capacity unit
-  - **WCU**: Write capacity unit
-- Anatomy
-  - **Tables**
-  - **Items** (like rows)
-  - **Attributes** (like columns)
-  - **Values** (data itself)
-- Read consistency
-  - Stored on SSD
-  - Replicated in ≥3 data centers
-  - With the default (Eventual Consistent Reads), there is potential for data to be out of sync among the data centers (updates take place within a second). Strongly consistent reads checks all copies, with the downside of longer latency.
+### Capacity units
+
+- **RCU**: Read capacity unit
+- **WCU**: Write capacity unit
+
+### Anatomy
+
+- **Tables**
+- **Items** (like rows)
+- **Attributes** (like columns)
+- **Values** (data itself)
+
+### Read consistency
+
+- Stored on SSD
+- Replicated in ≥3 data centers
+- With the default (Eventual Consistent Reads), there is potential for data to be out of sync among the data centers (updates take place within a second). Strongly consistent reads checks all copies, with the downside of longer latency.
 
 ### Partitions
 
@@ -49,7 +57,7 @@
   - per 10 GB data
   - when RCUs or WCUs are exceeded for a single partition
 - DynamoDB has a proprietary internal hash algorithm it uses to decide to which partition to write.
-- 5.13.00 Andrew forgot to edit out a clip of him stopping and editing the PowerPoint haha
+- 5.13.00 Andrew forgot to edit out a clip of him stopping and editing the PowerPoint
 
 ### Primary keys
 
@@ -95,7 +103,7 @@
   - 1 strongly consistent read per second
   - 2 eventually consistent reads per second
   - item ≤4 KB
-- **Calculating strong RCUs:** **Exam will ask how to calculate RCUs**
+- **Calculating strong RCUs** _(potential exam question)_
   - Round data up to nearest multiple of 4
   - Divide by 4
   - Multiply by number of reads
@@ -158,12 +166,12 @@
 - **Streams** can be enabled on tables. They log modifications to items.
 - When an insert, update, or delete occurs, the change will be logged and sent to a lambda function.
 
-### DynamoDB errors
+### DynamoDB exceptions
 
 - Video 1 5.36.40
-- **Exceptions are likely to show up on the exam.**
-- `ThrottlingException`: rate of requests exceeds allowed throughput for `CreateTable`, `UpdateTable`, or `DeleteTable`.
-- `ProvisionedThroughputExceededException`
+- **Types of exceptions** _(potential exam question)_
+  - `ThrottlingException`: rate of requests exceeds allowed throughput for `CreateTable`, `UpdateTable`, or `DeleteTable`.
+  - `ProvisionedThroughputExceededException`
 - The AWS SDK will automatically retry when an error occurs. It uses exponential backoffs (gradually trying less and less frequently) starting at 50 ms and going up to a minute before stopping.
 
 ### Secondary Indices

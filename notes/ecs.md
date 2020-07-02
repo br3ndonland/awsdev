@@ -12,8 +12,11 @@ ECS: Elastic Container Service
 - ECS confusingly calls its container groups “containers.”
 - **Tasks** launch containers defined in _taskdef.json_.
 - **Services** run tasks.
-- **Security groups can be applied to tasks** (may be an exam question).
-- The instructor Andrew ran into issues creating the ECS service, even though he is an AWS expert. I think it was partially because he had a `:latest` tag on the end of the service name. He usually tweets at AWS to get them to improve features.
+- **Security groups can be applied to tasks** _(potential exam question)_
+
+### ECS follow-along
+
+In the follow-along, the instructor Andrew ran into issues creating the ECS service, even though he is an AWS expert. I think it was partially because he had a `:latest` tag on the end of the service name. He usually tweets at AWS to get them to improve features.
 
 ### Fargate
 
@@ -22,4 +25,7 @@ ECS: Elastic Container Service
 - 2.40.00 Fargate vs Lambda:
   - Fargate offers more customization, but less integration
   - Lambda offers less memory and time, but better integration with other services
-- 2.42.45 Fargate follow-along
+
+### Fargate follow-along
+
+Video 1 2.42.45

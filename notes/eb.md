@@ -20,7 +20,7 @@ Elastic Beanstalk is like Heroku on AWS
 - **Rolling with additional batch** adds servers during the update so you never have reduced capacity. In case of failure, you may need an additional update to roll back the changes.
 - **Immutable** relies on an ASG. The entire ASG is deployed as a batch. The easiest and safest way to deploy. In case of failure, you just terminate the new ASG.
 - **Blue/Green** deployments are similar to immutable, but have a DNS change because they point to a new load balancer. DNS changes take time to propagate.
-- The definition of _in-place_ varies with scope:
+- The definition of _in-place_ varies with scope: _(potential exam question)_
   - **The exams use in-place to refer to the scope of the elastic beanstalk environment.** All-at-once, rolling, rolling with additional batch, and immutable are considered in-place.
   - If in-place refers to the scope of a single server, only all-at-once or rolling would be considered in-place.
   - If scope is an uninterrupted server, you need to do a zero-downtime deploy. EB can’t do this. Classic way to do this: Ruby on Rails + Unicorn + Capistrano

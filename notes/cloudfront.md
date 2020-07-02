@@ -43,8 +43,8 @@ Override request and response behavior
 
 1. Viewer request: can be used to only display resources to authenticated users
 2. Origin request
-3. Origin reponse
-4. Viewer reponse
+3. Origin response
+4. Viewer response
 
 ### Follow-along
 

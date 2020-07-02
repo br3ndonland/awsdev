@@ -15,8 +15,8 @@ Key management service
   - Primary resources in KMS
 - AWS KMS supports symmetric and asymmetric keys
   - Symmetric is a single 256 bit key (encrypting an S3 bucket)
-  - Asymettric keys are RSA key pairs
-- _CLI commands may appear on the exam._
+  - Asymmetric keys are RSA key pairs
+- **KMS CLI commands** _(potential exam question)_
   - `aws kms create-key`
   - `aws kms encrypt`
   - `aws kms decrypt`

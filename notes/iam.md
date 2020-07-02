@@ -33,7 +33,7 @@
 
 - Allows administrators to create temporary security credentials.
 - Roles include `AssumeRoleWithWebIdentity`.
-- **Exam question**: order of authentication with `AssumeRoleWithWebIdentity`?
+- **Order of authentication with `AssumeRoleWithWebIdentity`** _(potential exam question)_
   - First obtain JWT from OAuth2 provider (Google, Facebook, etc)
   - Provider returns JWT
   - Developer calls STS `AssumeRoleWithWebIdentity` with the AWS CLI.
