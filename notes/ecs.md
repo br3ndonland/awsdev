@@ -1,13 +1,20 @@
 # AWS Developer Associate: ECS and Fargate
 
+## Table of Contents <!-- omit in toc -->
+
+- [freeCodeCamp ExamPro walkthrough](#freecodecamp-exampro-walkthrough)
+  - [ECS](#ecs)
+  - [ECS follow-along](#ecs-follow-along)
+  - [Fargate](#fargate)
+  - [Fargate follow-along](#fargate-follow-along)
+
 ## freeCodeCamp ExamPro walkthrough
 
 [Video 1](https://youtu.be/RrKRN9zRBWs) 2.17.00
 
-ECS: Elastic Container Service
-
 ### ECS
 
+- ECS: Elastic Container Service
 - ECS runs Docker containers on EC2 instances
 - ECS confusingly calls its container groups “containers.”
 - **Tasks** launch containers defined in _taskdef.json_.
@@ -20,7 +27,8 @@ In the follow-along, the instructor Andrew ran into issues creating the ECS serv
 
 ### Fargate
 
-- 2.37.20
+2.37.20
+
 - Fargate is serverless (no EC2 or ECS “containers”)
 - 2.40.00 Fargate vs Lambda:
   - Fargate offers more customization, but less integration

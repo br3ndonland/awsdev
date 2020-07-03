@@ -1,10 +1,23 @@
 # AWS Developer Associate: Elastic Beanstalk
 
-Elastic Beanstalk is like Heroku on AWS
+## Table of Contents <!-- omit in toc -->
+
+- [freeCodeCamp ExamPro walkthrough](#freecodecamp-exampro-walkthrough)
+  - [Elastic Beanstalk definition](#elastic-beanstalk-definition)
+  - [Environments](#environments)
+  - [Deploys](#deploys)
+  - [Repo configuration](#repo-configuration)
+  - [Server configuration](#server-configuration)
+  - [CLI](#cli)
+  - [Follow-along](#follow-along)
 
 ## freeCodeCamp ExamPro walkthrough
 
 [Video 1](https://youtu.be/RrKRN9zRBWs) beginning
+
+### Elastic Beanstalk definition
+
+Elastic Beanstalk is like Heroku on AWS
 
 ### Environments
 
@@ -40,7 +53,7 @@ Elastic Beanstalk is like Heroku on AWS
 
 - Also in _env.yml_?
 - You can provide custom images to improve provisioning times
-- _dockerrun.aws.json_ can be used to specify [multi-container configuration](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_ecs.html). _TODO: why not docker-compose.yml?_
+- _dockerrun.aws.json_ can be used to specify [multi-container configuration](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_ecs.html). _TODO:_ why not docker-compose.yml?
 
 ### CLI
 
@@ -51,7 +64,7 @@ Elastic Beanstalk is like Heroku on AWS
 
 - Video 1 0.59.00
 - 1.36.00 IAM troubleshooting: didn’t create the proper service role, particle because the project was created from the command line in Cloud9. Don’t manually create it, try creating through the web UI or just re-do `eb create` in Cloud9.
-- 1.46.00 Changing to`DeploymentPolicy: Immutable` in a _.config_ file. Note that the instructor typed a key incorrectly: `IngoreHealthCheck`.
+- 1.46.00 Changing to`DeploymentPolicy: Immutable` in a _.config_ file. Note that the instructor typed a key incorrectly: `IgnoreHealthCheck`.
 - Blue/green: use `eb swap`
 - 1.58.00 Docker container
 - 2.01.30 [Single Docker container with ECR](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker-configuration.html):
