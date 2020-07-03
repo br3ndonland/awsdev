@@ -2,6 +2,14 @@
 
 ## Table of Contents <!-- omit in toc -->
 
+- [freeCodeCamp ExamPro walkthrough](#freecodecamp-exampro-walkthrough)
+  - [Intro](#intro)
+  - [Categories of events trailed by CloudTrail](#categories-of-events-trailed-by-cloudtrail)
+  - [Trail options](#trail-options)
+  - [Types of events](#types-of-events)
+  - [CloudTrail integrations](#cloudtrail-integrations)
+  - [Follow-along](#follow-along)
+
 ## freeCodeCamp ExamPro walkthrough
 
 ### Intro
