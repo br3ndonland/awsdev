@@ -55,7 +55,10 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
 - [Wikipedia: Infrastructure as code](https://en.wikipedia.org/wiki/Infrastructure_as_code)
 - [AWS CloudFormation docs](https://docs.aws.amazon.com/cloudformation/index.html)
 - [AWS CloudFormation docs: How does AWS CloudFormation work?](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-whatis-howdoesitwork.html)
+- [AWS CloudFormation docs: CloudFormation template anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
+- AWS Quick Start ([AWS](https://aws.amazon.com/quickstart/), [GitHub](https://github.com/aws-quickstart)): CloudFormation templates for common AWS use cases
 - [GitHub: awesome-cloudformation](https://github.com/aws-cloudformation/awesome-cloudformation)
+- [AWS Toolkit VSCode extension](https://github.com/aws/aws-toolkit-vscode)
 - [CloudFormation VSCode extension](https://github.com/aws-cloudformation/aws-cfn-lint-visual-studio-code)
 - [AWS Boto3 v1 docs: CloudFormation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudformation.html)
 - [Terraform docs: Terraform vs. CloudFormation](https://www.terraform.io/intro/vs/cloudformation.html)
