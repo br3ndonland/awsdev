@@ -55,5 +55,5 @@
 
 ### User data and metadata
 
-- **User data** is a script that is run when an EC2 instance is launched.
+- **User data** or `UserData` is a script that is run when an EC2 instance is launched.
 - **Meta data** about the instance can be seen at runtime by hitting a URL endpoint: `http://169.254.169.254/latest/meta-data`.
