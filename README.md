@@ -60,11 +60,22 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
 - [AWS CloudFormation docs: CloudFormation template anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)
 - AWS Quick Start ([AWS](https://aws.amazon.com/quickstart/), [GitHub](https://github.com/aws-quickstart)): CloudFormation templates for common AWS use cases
 - [GitHub: awesome-cloudformation](https://github.com/aws-cloudformation/awesome-cloudformation)
-- [AWS Toolkit VSCode extension](https://github.com/aws/aws-toolkit-vscode)
 - [CloudFormation VSCode extension](https://github.com/aws-cloudformation/aws-cfn-lint-visual-studio-code)
 - [AWS Boto3 v1 docs: CloudFormation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudformation.html)
-- [Terraform docs: Terraform vs. CloudFormation](https://www.terraform.io/intro/vs/cloudformation.html)
 - [Ansible docs: AWS](https://docs.ansible.com/ansible/latest/scenario_guides/guide_aws.html)
+- [Terraform docs: Terraform vs. CloudFormation](https://www.terraform.io/intro/vs/cloudformation.html)
+
+### Serverless
+
+- [AWS Toolkit VSCode extension](https://github.com/aws/aws-toolkit-vscode): has features for Lambda and SAM
+- [AWS Toolkit for VSCode docs](https://docs.aws.amazon.com/toolkit-for-vscode/index.html)
+- [AWS Serverless home](https://aws.amazon.com/serverless/)
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+- [AWS Lambda docs](https://docs.aws.amazon.com/lambda/)
+- [AWS Serverless Application Model (SAM) docs](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
+- [AWS SAM GitHub](https://github.com/awslabs/serverless-application-model))
+- [AWS SAM GitHub: cookiecutter-aws-sam-pipeline](https://github.com/aws-samples/cookiecutter-aws-sam-pipeline)
+- [AWS SAM Serverless CI/CD workshop GitHub](https://github.com/aws-samples/aws-serverless-cicd-workshop)
 
 ### AWS in biotech
 
