@@ -24,7 +24,7 @@ Elastic Beanstalk is like Heroku on AWS
 - Frequently have web and worker environments.
   - Web for main application
   - Worker for background jobs
-- _Why do you need an ELB (Elastic Load Balancer) if you have an AutoScaling Group (ASG)?_
+- _Why do you need an ELB (Elastic Load Balancer) if you have an AutoScaling Group (ASG)?_ -> The ELB can distribute traffic to different ASGs based on the specified configuration.
 
 ### Deploys
 
