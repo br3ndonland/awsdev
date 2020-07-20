@@ -42,6 +42,11 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
   - [YouTube](https://www.youtube.com/bartcastle)
   - [CBT Nuggets courses](https://www.cbtnuggets.com/trainers/bart-castle)
 
+### IAM
+
+- [Bart Castle IAM playlist](https://www.youtube.com/watch?v=jHQiX7QbLfA&list=PL3GN5xkPjwo23bCqxjxh0uXVW9tgIfhOi)
+- [New IAM course](https://aws.amazon.com/about-aws/whats-new/2020/05/new-digital-course-on-aws-security-identity-and-compliance-now-available/) "[Getting Started with AWS Security, Identity, and Compliance](https://www.aws.training/Details/eLearning?id=49720)"
+
 ### DynamoDB
 
 - [AWS DynamoDB docs](https://docs.aws.amazon.com/dynamodb/)
