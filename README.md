@@ -78,9 +78,10 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
 - [AWS Lambda](https://aws.amazon.com/lambda/)
 - [AWS Lambda docs](https://docs.aws.amazon.com/lambda/)
 - [AWS Serverless Application Model (SAM) docs](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
-- [AWS SAM GitHub](https://github.com/awslabs/serverless-application-model))
+- [AWS SAM GitHub](https://github.com/awslabs/serverless-application-model)
 - [AWS SAM GitHub: cookiecutter-aws-sam-pipeline](https://github.com/aws-samples/cookiecutter-aws-sam-pipeline)
 - [AWS SAM Serverless CI/CD workshop GitHub](https://github.com/aws-samples/aws-serverless-cicd-workshop)
+- [Chalice](https://aws.github.io/chalice/index.html) is a Python serverless microframework for AWS. It's like [Flask](https://flask.palletsprojects.com/en/1.1.x/) + [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) + Lambda. It has one of the more impressive quickstarts I've tried, as you can see from the terminal recording on the homepage. They deploy a REST API on Lambda and access the API over the public internet in one minute.
 
 ### AWS in biotech
 
