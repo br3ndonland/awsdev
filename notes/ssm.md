@@ -4,7 +4,7 @@
 
 [Video 1](https://youtu.be/RrKRN9zRBWs) 4.53.00
 
-- SSM is a parameter store
+- **Simple Systems Manager (SSM)** is a parameter store
 - Store passwords, database strings, and license codes as parameter values
 - Can encrypt with KMS
 - Can be hierarchical: `exampro/application/prod`

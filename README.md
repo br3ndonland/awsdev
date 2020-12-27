@@ -26,7 +26,8 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
 
 ### Certifications
 
-- [AWS certifications](https://aws.amazon.com/certification/)
+- [AWS certifications overview](https://aws.amazon.com/certification/)
+- [AWS training](https://www.aws.training/certification)
 - [freeCodeCamp: Pass the AWS Developer Associate exam with this free 16-hour course](https://www.freecodecamp.org/news/pass-the-aws-developer-associate-exam-with-this-free-16-hour-course/)
   - [Video 1](https://youtu.be/RrKRN9zRBWs) on YouTube
   - [Video 2](https://youtu.be/eCopK1RoyFM) on YouTube
