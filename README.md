@@ -4,23 +4,9 @@
 
 ## Description
 
-**This repository contains resources from my work on the [AWS Developer Associate certification](https://aws.amazon.com/certification/certified-developer-associate/). It's mostly notes right now, but after I pass the exam, I will add more code examples.**
+**This repository contains resources from my work on the [AWS Developer Associate certification](https://aws.amazon.com/certification/certified-developer-associate/).** The freeCodeCamp course was helpful, but I decided against taking the certification exam.
 
-Potential exam questions are indicated with _(potential exam question)_. Unanswered questions about the material are indicated with _TODO:_.
-
-I created the repository with the [GitHub CLI](https://cli.github.com/):
-
-```sh
-~/dev/aws
-❯ gh repo create awsdev -d "AWS Developer Associate Certification" \
-  --enable-issues=false --enable-wiki=false --public
-```
-
-```text
-✓ Created repository br3ndonland/awsdev on GitHub
-? Create a local project directory for br3ndonland/awsdev? Yes
-✓ Initialized repository in './awsdev/'
-```
+Potential exam questions, as reported by the freeCodeCamp course instructor, are indicated with _(potential exam question)_.
 
 ## Resources
 
@@ -31,7 +17,7 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
 - [freeCodeCamp: Pass the AWS Developer Associate exam with this free 16-hour course](https://www.freecodecamp.org/news/pass-the-aws-developer-associate-exam-with-this-free-16-hour-course/)
   - [Video 1](https://youtu.be/RrKRN9zRBWs) on YouTube
   - [Video 2](https://youtu.be/eCopK1RoyFM) on YouTube
-  - If you would like to watch the videos offline, see [youtube-dl](https://github.com/ytdl-org/youtube-dl).
+  - If you would like to watch the videos offline, see [`youtube-dl`](https://github.com/ytdl-org/youtube-dl).
   - [Code](https://github.com/examproco/thefreeawsdeveloperassociate)
 
 ### General
@@ -88,3 +74,14 @@ I created the repository with the [GitHub CLI](https://cli.github.com/):
 
 - AWS reinvent 2019: [Creating life at scale with AWS](https://youtu.be/arDI64ja6KA), Dave Treff, Ginkgo Bioworks
 - AWS reinvent 2019: [High-throughput production of mRNA](https://youtu.be/cxu2cD5FBcg), Dave Johnson, Moderna Therapeutics
+
+## Exam
+
+- Exam lasts 130 minutes.
+- 72% is passing.
+- Associate level exam fees:
+  - $20 USD for a practice exam
+  - $150 USD for the full exam **(per attempt, so if you don't pass you have to pay another $150)**
+- The [aws.training](https://www.aws.training) site is basically just a teaser. The actual testing portal is provided through CertMetrics, "a third-party service provider," which is apparently now called [Alpine Testing Solutions](https://www.alpinetesting.com/). You have to log in through your normal Amazon account, not your AWS account, and it may not allow login over VPN.
+- Exams are administered through other third-party proprietary platforms, either PSI or Pearson VUE. It's unclear why they have two options, but it's probably for international availability reasons. Either way, you will be recorded on video and audio during the exam, and you have to agree to privacy-invading terms of service. Pearson VUE has an additional "Facial Comparison Policy" in which you agree to let them perform arbitrary facial recognition on you, to "further develop, upgrade, and improve this application."
+- As described in the [AWS certification docs](https://aws.amazon.com/certification/certification-digital-badges/) and the [CertMetrics portal](https://www.certmetrics.com/amazon/candidate/acclaim_sso.aspx), once you complete and pass the exam, you have to sign up for yet another proprietary platform, [Acclaim by Credly](https://www.youracclaim.com), just to get a certification badge. Apparently CertMetrics used to provide badges, but "CertMetrics digital badges were retired on October 1st, 2020."
