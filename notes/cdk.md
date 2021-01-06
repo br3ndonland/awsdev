@@ -9,7 +9,10 @@
 ### CDK definition
 
 - **The [Cloud Development Kit (CDK)](https://docs.aws.amazon.com/cdk/latest/guide/home.html) is a CloudFormation transpiler.** It takes in source code written in other languages, and outputs CloudFormation templates.
-- _TODO:_ CDK vs SDK vs SAM? When do I use each one?
+- **CDK vs. SDK**
+  - Both can provision resources.
+  - CDKs transpile (AWS CDK transpiles other code languages to CloudFormation)
+  - SDKs are written and used with the same the code language (Boto3 is written in Python)
 
 ### CDK languages
 
