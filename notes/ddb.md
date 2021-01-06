@@ -264,7 +264,7 @@ Global Secondary Index
 
 Video 1 6.05.45
 
-- Andrew uses the same Cloud9 environment from the [[AWS Developer Associate: Elastic Beanstalk]] follow-along.
+- Andrew uses the same Cloud9 environment from the [Elastic Beanstalk follow-along](eb.md#follow-along).
 - Files: [GitHub - ExamProCo/TheFreeAWSDeveloperAssociate](https://github.com/examproco/thefreeawsdeveloperassociate)
 - Data: _starfleet.csv_ (Star Trek)
 - See the [AWS CLI DynamoDB reference](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/dynamodb/index.html#cli-aws-dynamodb)
@@ -278,16 +278,16 @@ Andrew walks through table creation in the UI and CLI (`aws dynamodb create-tabl
 ```sh
 ~
 ❯ aws dynamodb create-table \
---table-name Starships \
---attribute-definitions \
-AttributeName=ShipClass,AttributeType=S \
-AttributeName=Registry,AttributeType=S \
---key-schema \
-AttributeName=ShipClass,KeyType=HASH \
-AttributeName=Registry,KeyType=RANGE \
---provisioned-throughput \
-ReadCapacityUnits=5,WriteCapacityUnits=5 \
---region us-east-2
+  --table-name Starships \
+  --attribute-definitions \
+  AttributeName=ShipClass,AttributeType=S \
+  AttributeName=Registry,AttributeType=S \
+  --key-schema \
+  AttributeName=ShipClass,KeyType=HASH \
+  AttributeName=Registry,KeyType=RANGE \
+  --provisioned-throughput \
+  ReadCapacityUnits=5,WriteCapacityUnits=5 \
+  --region us-east-2
 ```
 
 A better way is to generate a skeleton file in YAML, populate the fields there, and then read the file when creating the table.
@@ -300,7 +300,7 @@ A better way is to generate a skeleton file in YAML, populate the fields there, 
 # Generate a skeleton
 ~
 ❯ aws dynamodb create-table --generate-cli-skeleton yaml-input > \
-~/dev/aws/TheFreeAWSDeveloperAssociate/DynamoDB/dynamodb-starships.yaml
+  ~/dev/aws/TheFreeAWSDeveloperAssociate/DynamoDB/dynamodb-starships.yaml
 
 # Edit the skeleton in your text editor
 ~
@@ -309,7 +309,7 @@ A better way is to generate a skeleton file in YAML, populate the fields there, 
 # Create the table with the skeleton
 ~
 ❯ aws dynamodb create-table --region us-east-2 --cli-input-yaml \
-~/dev/aws/TheFreeAWSDeveloperAssociate/DynamoDB/dynamodb-starships.yaml
+  ~/dev/aws/TheFreeAWSDeveloperAssociate/DynamoDB/dynamodb-starships.yaml
 ```
 
 #### Convert CSV to JSON and `batch-write-item`
