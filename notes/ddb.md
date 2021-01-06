@@ -2,6 +2,11 @@
 
 ## Table of Contents <!-- omit in toc -->
 
+- [DynamoDB basics](#dynamodb-basics)
+  - [Definition](#definition)
+  - [Use cases](#use-cases)
+  - [Developing with DynamoDB](#developing-with-dynamodb)
+  - [Resources](#resources)
 - [freeCodeCamp ExamPro walkthrough](#freecodecamp-exampro-walkthrough)
   - [Intro](#intro)
   - [Capacity units](#capacity-units)
@@ -25,6 +30,38 @@
   - [DynamoDB CLI commands](#dynamodb-cli-commands)
   - [DynamoDB follow-along](#dynamodb-follow-along)
 
+## DynamoDB basics
+
+### Definition
+
+**DynamoDB is a [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database.** See the [DynamoDB Guide: What is DynamoDB?](https://www.dynamodbguide.com/what-is-dynamo-db) for a useful description.
+
+### Use cases
+
+- **Low-latency requirements.**
+- **Serverless applications.**
+- **Data sets with known access patterns.** DynamoDB requires some access patterns to be planned in advance (such as primary keys and partitions), which can be challenging. For more about these considerations, see [Jeremy Daly's DynamoDB blog post](https://www.jeremydaly.com/important-lessons-from-the-dynamodb-book/).
+
+### Developing with DynamoDB
+
+- [Browser console](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ConsoleDynamoDB.html)
+- [AWS CLI](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/dynamodb/index.html#cli-aws-dynamodb)
+- Infrastructure-as-code (IAC)
+  - CloudFormation: See [notes](cloudformation.md).
+  - Terraform: See the [Terraform AWS provider docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs).
+- Cloud Development Kits (CDKs)
+  - [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html): The AWS CDK is a CloudFormation transpiler. It takes in source code written in other languages like Python and TypeScript, and outputs CloudFormation templates. See [CDK notes](cdk.md).
+  - [Terraform CDK (`cdktf`)](https://github.com/hashicorp/terraform-cdk): Built on the AWS CDK, but transpiles to Terraform instead of CloudFormation.
+- Software Development Kits (SDKs)
+  - [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html): Boto3 is the Python SDK (Software Development Kit). See the [AWS docs](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.html) for a tutorial.
+- Local development
+  - AWS provides [DynamoDB Local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html), a Java app you can download and run locally.
+  - [Serverless Framework](https://www.serverless.com/) has a plugin for offline development, `serverless offline *`.
+
+### Resources
+
+See the [README](../README.md#dynamodb) for more resources.
+
 ## freeCodeCamp ExamPro walkthrough
 
 ### Intro
@@ -38,10 +75,10 @@
 
 ### Anatomy
 
-- **Tables**
-- **Items** (like rows)
-- **Attributes** (like columns)
-- **Values** (data itself)
+- **Table** (like an entire database)
+- **Item** (like a row in a relational database)
+- **Attribute** (like a column in a relational database)
+- **Value** (data itself)
 
 ### Read consistency
 
@@ -75,6 +112,7 @@
 ### Query
 
 - Video 1 5.18.00
+- **DynamoDB does not support table joins.**
 - Query allows you to find items in a table by primary key values
 - Return specific attributes with `ProjectionExpression`
 - Reverse order with `ScanIndexForward`
@@ -176,11 +214,9 @@
 
 ### Secondary Indices
 
-Video 1 5.39.15
-
-**Secondary Index** is a copy of selected database values used to quickly query data on **keys other than the primary key, with no uniqueness requirement**.
-
-[Types of DynamoDB secondary indices](https://www.dynamodbguide.com/secondary-indexes): **Generally use GSI over LSI**
+- Video 1 5.39.15
+- **Secondary Index** is a copy of selected database values used to quickly query data on **keys other than the primary key, with no uniqueness requirement**.
+- [Types of DynamoDB secondary indices](https://www.dynamodbguide.com/secondary-indexes): **Generally use GSI over LSI**
 
 #### LSI
 

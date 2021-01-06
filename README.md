@@ -36,13 +36,19 @@ Potential exam questions, as reported by the freeCodeCamp course instructor, are
 
 ### DynamoDB
 
-- [AWS DynamoDB docs](https://docs.aws.amazon.com/dynamodb/)
-- [AWS CLI v2 docs: DynamoDB](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/dynamodb/index.html#cli-aws-dynamodb)
-- [AWS Boto3 v1 docs: DynamoDB](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html) - Boto3 is the Python SDK (Software Development Kit)
+- Background
+  - [Werner Vogels Blog 20071002: Amazon's Dynamo](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html) _(introduction to DynamoDB by Amazon CTO)_
+  - [Werner Vogels Blog 20171002: A decade of Dynamo](https://www.allthingsdistributed.com/2017/10/a-decade-of-dynamo.html)
+- Docs
+  - [AWS DynamoDB docs](https://docs.aws.amazon.com/dynamodb/)
+  - [AWS CLI v2 docs: DynamoDB](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/dynamodb/index.html#cli-aws-dynamodb)
+  - [AWS Boto3 v1 docs: DynamoDB](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/dynamodb.html) - Boto3 is the Python SDK (Software Development Kit)
 - Alex DeBrie
-  - [Full Stack Radio podcast episode 2020 139](https://www.fullstackradio.com/episodes/139) 20200508
-  - [DynamoDB Guide from Alex DeBrie](https://www.dynamodbguide.com)
   - AWS reinvent 2019: [Data modeling with Amazon DynamoDB](https://youtu.be/DIQVJqiSUkE), Alex DeBrie
+  - [Full Stack Radio podcast episode 139](https://www.fullstackradio.com/episodes/139) 2020-05-08
+  - [DynamoDB Guide by Alex DeBrie](https://www.dynamodbguide.com)
+  - [DynamoDB Book by Alex DeBrie](https://www.dynamodbbook.com/)
+  - [Jeremy Daly's blog post on the DynamoDB book](https://www.jeremydaly.com/important-lessons-from-the-dynamodb-book/)
 
 ### CloudFormation and infrastructure as code
 
