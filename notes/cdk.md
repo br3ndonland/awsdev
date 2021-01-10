@@ -21,7 +21,7 @@ There is also a [Terraform CDK (`cdktf`)](https://github.com/hashicorp/terraform
 
 - Both can provision resources.
 - CDKs transpile (AWS CDK transpiles other code languages to CloudFormation)
-- SDKs are written and used with the same the code language (Boto3 is written in Python)
+- SDKs are written and used with the same the code language (Boto3 is written in Python). See the [Terraform docs](https://www.terraform.io/intro/vs/boto.html) for a helpful comparison.
 
 ### Imperative vs Declarative
 
